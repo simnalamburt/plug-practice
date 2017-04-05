@@ -2,17 +2,14 @@
 ========
 
 ### Instructions
-Install dependencies:
-```console
-$ mix deps.get
-```
+```bash
+# Install dependencies
+mix deps.get
+# Run the server
+mix run --no-halt
 
-Run the server:
-```console
-$ iex -S mix
-
-iex> Plug.Adapters.Cowboy.http(PlugPractice, [])
-{:ok, #PID<...>}
+# Run the server with an interactive shell
+iex -S mix
 ```
 
 <br>

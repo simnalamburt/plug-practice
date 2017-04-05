@@ -15,7 +15,8 @@ defmodule PlugPractice.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
-    [applications: [:cowboy, :plug],
+    [mod: {EntryPoint, []},
+     applications: [:cowboy, :plug],
      extra_applications: [:logger]]
   end
 
