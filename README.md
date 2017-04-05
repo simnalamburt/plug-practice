@@ -1,20 +1,19 @@
 [Plug] Practice
 ========
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `plug_practice` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [{:plug_practice, "~> 0.1.0"}]
-end
+### Instructions
+Install dependencies:
+```console
+$ mix deps.get
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/plug_practice](https://hexdocs.pm/plug_practice).
+Run the server:
+```console
+$ iex -S mix
+
+iex> Plug.Adapters.Cowboy.http(PlugPractice, [])
+{:ok, #PID<...>}
+```
 
 <br>
 

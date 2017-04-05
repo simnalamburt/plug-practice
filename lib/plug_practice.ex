@@ -3,16 +3,17 @@ defmodule PlugPractice do
   Documentation for PlugPractice.
   """
 
-  @doc """
-  Hello world.
+  import Plug.Conn
 
-  ## Examples
+  def init(options) do
+    # TODO: initialize options
 
-      iex> PlugPractice.hello
-      :world
+    options
+  end
 
-  """
-  def hello do
-    :world
+  def call(conn, _opts) do
+    conn
+    |> put_resp_content_type("text/plain")
+    |> send_resp(200, "Hello world")
   end
 end

@@ -15,7 +15,8 @@ defmodule PlugPractice.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
-    [extra_applications: [:logger]]
+    [applications: [:cowboy, :plug],
+     extra_applications: [:logger]]
   end
 
   # Dependencies can be Hex packages:
@@ -28,6 +29,7 @@ defmodule PlugPractice.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:cowboy, "~> 1.1"},
+     {:plug, "~> 1.3"}]
   end
 end
