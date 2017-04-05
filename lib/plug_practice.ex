@@ -1,19 +1,15 @@
 defmodule PlugPractice do
-  @moduledoc """
-  Documentation for PlugPractice.
-  """
+  use Plug.Router
 
-  import Plug.Conn
+  plug Plug.Logger
+  plug :match
+  plug :dispatch
 
-  def init(options) do
-    # TODO: initialize options
-
-    options
+  get "/" do
+    send_resp(conn, 200, "Hello, world!")
   end
 
-  def call(conn, _opts) do
-    conn
-    |> put_resp_content_type("text/plain")
-    |> send_resp(200, "Hello world")
+  match _ do
+    send_resp(conn, 404, "oops")
   end
 end
