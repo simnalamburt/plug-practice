@@ -30,8 +30,8 @@ defmodule PlugPractice.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:cowboy, "~> 1.1"},
-     {:plug, "~> 1.3"},
-     {:poison, "~> 3.0"}]
+    [{:cowboy, ">=1.1.2 and <2.0.0"},
+     {:plug, ">=1.3.4 and <2.0.0"},
+     {:poison, ">=3.1.0 and <4.0.0"}]
   end
 end
