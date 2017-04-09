@@ -16,7 +16,7 @@ defmodule PlugPractice.Mixfile do
   def application do
     # Specify extra applications you'll use from Erlang/Elixir
     [mod: {EntryPoint, []},
-     applications: [:cowboy, :plug],
+     applications: [:cowboy, :plug, :poison],
      extra_applications: [:logger]]
   end
 
@@ -31,6 +31,7 @@ defmodule PlugPractice.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [{:cowboy, "~> 1.1"},
-     {:plug, "~> 1.3"}]
+     {:plug, "~> 1.3"},
+     {:poison, "~> 3.0"}]
   end
 end
