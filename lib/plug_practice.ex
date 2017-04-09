@@ -6,7 +6,9 @@ defmodule PlugPractice do
   plug :dispatch
 
   get "/" do
-    send_resp(conn, 200, "Hello, world!")
+    conn
+    |> put_resp_content_type("application/json")
+    |> send_resp(200, Poison.encode!(%{value: "Hello, world!"}))
   end
 
   match _ do
